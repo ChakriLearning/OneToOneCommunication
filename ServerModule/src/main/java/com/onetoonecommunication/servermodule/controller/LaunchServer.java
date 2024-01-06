@@ -23,7 +23,7 @@ public class LaunchServer {
                 oneToOneClientHandler.displayAvailableClients(); //displaying the available clients to newly added client  //write;
                 oneToOneClientHandler.getClientResponce_WhomHeWantsToConnect();  //read
                 Socket peerSocket = oneToOneClientHandler.setSocketFromClientResponce();
-
+///
                 while (!newClientSocket.isClosed() || !peerSocket.isClosed() ) {
                     new Thread(oneToOneClientHandler::readFromNewClientAndWriteToExistingClient).start();
                     new Thread(oneToOneClientHandler::readFromExistingClientAndWriteToNewClient).start();
